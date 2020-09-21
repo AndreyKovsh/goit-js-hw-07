@@ -14,5 +14,5 @@ const products = ingredients.map(element => {
   itemsEl.textContent = element;
   return itemsEl;
 });
-console.log(products);
+// console.log(products);
 contIngEl.append(...products);

@@ -15,3 +15,13 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const exhibitionEl = document.querySelector('#gallery');
+console.log(exhibitionEl);
+
+images.map(img => {
+  exhibitionEl.insertAdjacentHTML(
+    'beforeend',
+    `<li class="list"><img class="img" src="${img.url}", alt="${img.alt}"></li>`,
+  );
+});
