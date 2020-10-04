@@ -4,13 +4,11 @@ valInpEl.addEventListener('blur', onInputValueCheck);
 
 function onInputValueCheck(item) {
   if (
-    item.currentTarget.getAttribute('data-length') >
-    item.currentTarget.value.length
+    item.currentTarget.value.length !=
+    item.currentTarget.getAttribute('data-length')
   ) {
     valInpEl.classList.add('invalid');
-    valInpEl.classList.remove('valid');
   } else {
-    valInpEl.classList.add('valid');
-    valInpEl.classList.remove('invalid');
+    valInpEl.classList.replace('invalid', 'valid');
   }
 }
